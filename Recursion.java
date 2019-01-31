@@ -24,16 +24,15 @@ public class Recursion{
 */
 
   public static int fib(int n){
-    int ary[] = new int[];
-    f[0] = 0;
-    f[1] = 1;
+    int ary[] = new int[n+2];
+    ary[0] = 0;
+    ary[1] = 1;
     for (int i = 2; i <= n; i++)
     {
-        f[i] = f[i-1] + f[i-2];
+        ary[i] = ary[i-1] + ary[i-2];
     }
-    return f[n];
+    return ary[n];
     }
-  }
 
 
 //  public static ArrayList<Integer> makeAllSums(){
