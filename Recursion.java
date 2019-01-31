@@ -18,18 +18,11 @@ public class Recursion{
   }
 
   public static int fib(int n){
-    if (n <= 1) return 1;
-    return fibH(n, 0, 0);
+    if (n <= 1) return n;
+    return fib(n-1) + fib(n-2);
   }
 
-  public static int fibH(int n, int current, int sum){
-    int newSum = sum + fib(n-1) + fib(n-2);
-    if (current < n ){
-      return newSum;
-    }
-    return fibH(n, current + 1, newSum);
-  }
-
+  
 
 //  public static ArrayList<Integer> makeAllSums(){
 
