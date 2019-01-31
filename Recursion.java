@@ -22,12 +22,12 @@ public class Recursion{
     return fibH(n, 0, 0);
   }
 
-  public static int fibH(int n, int, current, int sum){
-    newSum = sum + fib(n-1) + fib(n-2);
-    if (current <= n ){
-      return newSum
+  public static int fibH(int n, int current, int sum){
+    int newSum = sum + fib(n-1) + fib(n-2);
+    if (current < n ){
+      return newSum;
     }
-    return fibH(n, current + 1, newSum;)
+    return fibH(n, current + 1, newSum);
   }
 
 
@@ -36,9 +36,18 @@ public class Recursion{
 //  }
 
   public static void main(String[] args){
-    int n = Integer.parseInt(args[0]);
+    String s = args[0];
+    int n = Integer.parseInt(args[1]);
+
+
+    if (s.equals("sqrt")){
     System.out.println(Sqrt(n,0.001));
     }
+
+    else if(s.equals("fib")){
+      System.out.println(fib(n));
+    }
+  }
 
 
 }
