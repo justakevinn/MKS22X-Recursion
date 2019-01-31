@@ -13,21 +13,21 @@ public class Recursion{
     else{
       //System.out.println(guess);
       double newGuess =  ( n / guess + guess) / 2;
-      return SqrtH(n, newGuess);
+      return SqrtH(n, tolerance, newGuess);
     }
   }
 
-  public static int fib(int n){
+//  public static int fib(int n){
 
-  }
+//  }
 
-  public static ArrayList<Integer> makeAllSums(){
+//  public static ArrayList<Integer> makeAllSums(){
 
-  }
+//  }
 
   public static void main(String[] args){
     int n = Integer.parseInt(args[0]);
-    System.out.println(Sqrt(n));
+    System.out.println(Sqrt(n,0.001));
     }
 
 
