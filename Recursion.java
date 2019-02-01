@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Recursion{
 
 
@@ -27,17 +29,30 @@ public class Recursion{
     int ary[] = new int[n+2];
     ary[0] = 0;
     ary[1] = 1;
-    for (int i = 2; i <= n; i++)
-    {
-        ary[i] = ary[i-1] + ary[i-2];
+    for (int i = 2; i <= n; i++){
+      ary[i] = ary[i-1] + ary[i-2];
     }
     return ary[n];
     }
 
 
-//  public static ArrayList<Integer> makeAllSums(){
+  public static ArrayList<Integer> makeAllSums(int n){
+    return makeAllSumsH(n, 0);
+  }
 
-//  }
+  public static ArrayList<Integer> makeAllSumsH(int n, int current){
+    ArrayList<Integer> sums = new ArrayList<Integer>();
+    if (n == 0){
+      sums.add(current);
+    }
+    else{
+      makeAllSumsH(n-1, current+n);
+      makeAllSumsH(n-1, current);
+    }
+    return sums;
+
+
+  }
 
   public static void main(String[] args){
     String s = args[0];
