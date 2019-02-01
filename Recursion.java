@@ -37,19 +37,19 @@ public class Recursion{
 
 
   public static ArrayList<Integer> makeAllSums(int n){
-    return makeAllSumsH(n, 0);
+    ArrayList<Integer> sums = new ArrayList<Integer>();
+    makeAllSumsH(sums, n, 0);
+    return sums;
   }
 
-  public static ArrayList<Integer> makeAllSumsH(int n, int current){
-    ArrayList<Integer> sums = new ArrayList<Integer>();
+  public static void makeAllSumsH(ArrayList<Integer> sums, int n, int current){
     if (n == 0){
       sums.add(current);
     }
     else{
-      makeAllSumsH(n-1, current+n);
-      makeAllSumsH(n-1, current);
+      makeAllSumsH(sums, n-1, current+n);
+      makeAllSumsH(sums, n-1, current);
     }
-    return sums;
 
 
   }
@@ -65,6 +65,10 @@ public class Recursion{
 
     else if(s.equals("fib")){
       System.out.println(fib(n));
+    }
+
+    else if(s.equals("mas")){
+      System.out.println(makeAllSums(n));
     }
   }
 
