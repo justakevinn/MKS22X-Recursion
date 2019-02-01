@@ -19,13 +19,9 @@ public class Recursion{
     }
   }
 
-/*  public static int fib(int n){
-    if (n <= 1) return n;
-    return fib(n-1) + fib(n-2);
-  }
-*/
 
-  public static int fib(int n){     //Isn't recursion//
+
+/*  public static int fib(int n){     //Isn't recursion//
     int ary[] = new int[n+2];
     ary[0] = 0;
     ary[1] = 1;
@@ -34,7 +30,15 @@ public class Recursion{
     }
     return ary[n];
     }
+*/
 
+  public static int fib(int n){
+    if (n == 0) return 0;
+    else if (n == 1) return 1;
+    else{
+      return fib (n-1) + fib (n-2);
+    }
+  }
 
   public static ArrayList<Integer> makeAllSums(int n){
     ArrayList<Integer> sums = new ArrayList<Integer>();
