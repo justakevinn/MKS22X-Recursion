@@ -59,6 +59,45 @@ public class recursion{
 
   }
 
+  public static void testFib(int testcase){
+  recursion r = new recursion();
+  int[] input = {0,1,2,3,5,30};
+  int[] output ={0,1,1,2,5,832040};
+  int max = input.length;
+  if(testcase < input.length){
+    int in = input[testcase];
+    try{
+
+      int ans = r.fib(in);
+      int correct = output[testcase];
+      if(ans == correct){
+        System.out.println("PASS test fib "+in+". "+correct);
+      }
+      else{
+        System.out.println("FAIL test fib"+in+". "+ans+" vs "+correct);
+
+      }
+    }catch(IllegalArgumentException n){
+      if(in < 0){
+        System.out.println("PASS test fib"+in+" IllegalArgumentException");
+      }else{
+        System.out.println(" FAIL IllegalArgumentException in test case:"+in);
+      }
+    }catch(Exception e){
+      System.out.println(" FAIL Some exception in test case:"+in);
+    }
+  }
+}
+
+  public static void main(String[] args){
+      testFib(0);
+      testFib(1);
+      testFib(2);
+      testFib(3);
+      testFib(4);
+      testFib(5);
+
+  }
   /*public static void main(String[] args){
     String s = args[0];
     int n = Integer.parseInt(args[1]);
@@ -76,8 +115,9 @@ public class recursion{
       System.out.println(makeAllSums(n));
     }
   }
-*/
-public static void main(String[] args) {
+  */
+
+/* public static void main(String[] args) {
         System.out.println("sqrt()");
         System.out.println("-----------------------\n");
 
@@ -137,5 +177,5 @@ public static void main(String[] args) {
         System.out.println("EXPECTED: [0, 3, 2, 5, 1, 4, 3, 6]");
         System.out.println(makeAllSums(3));           // [0, 3, 2, 5, 1, 4, 3, 6]
 }
-
+*/
 }
