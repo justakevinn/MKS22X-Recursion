@@ -59,7 +59,7 @@ public class recursion{
 
   }
 
-  public static void testFib(int testcase){
+  /*public static void testFib(int testcase){
   recursion r = new recursion();
   int[] input = {0,1,2,3,5,30};
   int[] output ={0,1,1,2,5,832040};
@@ -88,14 +88,14 @@ public class recursion{
     }
   }
 }
-
+*/
   public static void main(String[] args){
-      testFib(0);
-      testFib(1);
-      testFib(2);
-      testFib(3);
-      testFib(4);
-      testFib(5);
+      //testFib(0);
+      //testFib(1);
+      //testFib(2);
+      //testFib(3);
+      //testFib(4);
+      //testFib(5);
 
   }
   /*public static void main(String[] args){
